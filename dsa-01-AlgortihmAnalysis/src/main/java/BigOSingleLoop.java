@@ -1,8 +1,8 @@
 public class BigOSingleLoop {
     public static void main(String[] args) {
         long numberOfOperations=0;
-        int n=10000;// size of  Data
-        int m=500;
+        int n=10;// size of  Data
+        int m=50;
         long startTime;
         long endTime;
         System.out.println("Input size n is = "+ n);
