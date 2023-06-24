@@ -1,7 +1,7 @@
 public class BigO_SOLID {
     public static void main(String[] args) {
 
-        int n = 1000;// size of  Data
+        int n = 10000;// size of  Data
         int m = 500;
         long startTime;
         long endTime;
