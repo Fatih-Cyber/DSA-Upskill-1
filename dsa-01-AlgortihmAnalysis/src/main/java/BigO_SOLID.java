@@ -6,12 +6,14 @@ public class BigO_SOLID {
         long startTime;
         long endTime;
         System.out.println("Input size n is = " + n);
-        singleLoop(n);
+        int[] scoreArray=new int[10];
+        System.out.println(scoreArray);
+       /* singleLoop(n);
         nestedLoop(n);
         tripleLoop(n);
         nmNestedLoop(n, m);
         nmConsecutiveLoop(n, m);
-        logaritmicComplexity(n);
+        logaritmicComplexity(n);*/
     }
 
 
