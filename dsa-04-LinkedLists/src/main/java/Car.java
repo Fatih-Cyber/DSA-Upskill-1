@@ -6,4 +6,8 @@ public class Car {
         Brand = brand;
         color=color;
     }
+
+    public Car(String brand) {
+        Brand = brand;
+    }
 }
