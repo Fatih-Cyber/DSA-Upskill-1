@@ -19,7 +19,16 @@ public class UserLinkedList {
         }
         size++;
     }
-
+    void insertFirst(UserNode node){
+        // Case 1: List is Empty
+        if (isEmpty()) {
+            head=tail=node;
+        } else {
+           node.next=head;// Case 2: Not empty
+           head=node;
+        }
+        size++;
+    }
     void printNames(){
         // first check if list is empty
         if (isEmpty()) {
