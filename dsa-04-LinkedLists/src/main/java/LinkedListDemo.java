@@ -7,9 +7,7 @@ public class LinkedListDemo {
         Node node3 = new Node(3);
         Node node4 = new Node(4);
 
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = node4;
+
 
         /*System.out.println("Node1's address is: " + node1 + "Node1' next address is " + node1.next);
         System.out.println("Node2's address is: " + node2 + "Node2' next address is " + node2.next);
