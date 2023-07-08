@@ -11,5 +11,14 @@ public class UserListApp {
         myLinkedListSingle.printNames();
         myLinkedListSingle.insertFirst(new UserNode("SubZero","test"));
         myLinkedListSingle.printNames();
+        System.out.println();
+        System.out.println("Size : " +myLinkedListSingle.size);
+        myLinkedListSingle.deleteByName("Carol");
+
+        myLinkedListSingle.printNames();
+        System.out.println();
+        System.out.println("Size : " +myLinkedListSingle.size);
+
+
     }
 }
