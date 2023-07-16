@@ -11,11 +11,11 @@ public class BrowserHistory {
     }
 
     public String back(int steps) {
-
+      return "url";
     }
 
     public String forward(int steps) {
-
+        return "url";
     }
 
 
