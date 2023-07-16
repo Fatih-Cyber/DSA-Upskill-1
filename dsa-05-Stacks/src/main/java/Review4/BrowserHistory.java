@@ -27,7 +27,6 @@ public class BrowserHistory {
             currentPage= history.pop();
             steps--;
         }
-        System.out.println("Back operation of "+ stepNumber + " brings " + currentPage + " as current page");
       return currentPage;
     }
 
@@ -38,7 +37,6 @@ public class BrowserHistory {
             currentPage= forwardStack.pop();
             steps--;
         }
-        System.out.println("Forward operation of "+ stepNumber + " brings " + currentPage + " as current page");
         return currentPage;
     }
 

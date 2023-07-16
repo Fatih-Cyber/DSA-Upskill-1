@@ -1,7 +1,11 @@
 package Review4;
 
 public class PowerOfTwo {
-    public boolean isPowerOfTwo(int n) {
-    return true;
+    public static boolean isPowerOfTwo(int n) {
+        //Base condition
+        if (n==1) return true;
+        if(n%2!=0 || n<=0) return false;
+
+    return isPowerOfTwo(n/2);
     }
 }
