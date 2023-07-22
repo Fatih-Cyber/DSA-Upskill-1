@@ -3,8 +3,8 @@ public class LinkedListApp {
         MySinglyLinkedList list1=new MySinglyLinkedList();
         for(int i=0;i<11;i++) list1.add(i);
         list1.printNodes();
-        System.out.println("Kth item from last is:  " +list1.getKthFromLast(4));
-        list1.removeKthFromLast(1);
+        System.out.println("Kth item from last is:  " +list1.getKthItemFromLast(1));
+        list1.removeKthItemFromLast(1);
 
         //System.out.println();
         //System.out.println(list1.indexOf(4));
