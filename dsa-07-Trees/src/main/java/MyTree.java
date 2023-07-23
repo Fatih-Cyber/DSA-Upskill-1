@@ -66,5 +66,56 @@ public class MyTree {
             if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
         }
     }
+    public boolean isLeaf(TNode node) {
+        return node.leftChild==null && node.rightChild==null;
+    }
+    public void printLeaves(TNode root){
+        if (root==null) return;
+        // perform visit on Root
+
+        // Recursively Branch Left Subtree
+        printLeaves(root.leftChild);
+        printLeaves(root.rightChild);
+        if (isLeaf(root)) System.out.print(root.value + ", ");
+
+        // Recursively Branch Right Subtree
+    }
+    int countLeaves(TNode root){
+        if (root==null) return 0;
+        if (isLeaf(root)) return 1;
+        // recursively left
+        // recursively right
+        return countLeaves(root.leftChild) + countLeaves(root.rightChild);
+    }
+    int findSumOfLeaves(TNode root){
+        if (root==null) return 0;
+        if (isLeaf(root)) return root.value;
+        return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
+    }
+    int height(TNode root){
+        if (root==null) return -1;
+        if (isLeaf(root)) return 0;
+        return 1+ Math.max(height(root.leftChild), height(root.rightChild));
+    }
+    public int calculateNodeDepthSums(){
+        return nodeDepthSums(root, 0);
+    }
+    // Assignment  Sum of Node Depths
+    public int nodeDepthSums(TNode node, int A){
+        if(node==null) return 0;
+        System.out.println(A);
+        return A+nodeDepthSums(node.leftChild, A+1) +nodeDepthSums(node.rightChild, A+1);
+    }
+    // Assignment  Sum of All Nodes recursively
+    public int calculateNodeSums(){
+        return nodeSums(root);
+    }
+
+    public int nodeSums(TNode node){
+        if(node==null) return 0;
+
+        return node.value+ nodeSums(node.leftChild)+nodeSums(node.rightChild);
+    }
+    // Sum of all Nodes
 
 }
