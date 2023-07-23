@@ -23,11 +23,15 @@ public class MyHashMap {
     }
 
     public int get(int key) {
-        return 0;
+        // calculate index address with modulus
+        int hashCode =key%modNumber;// I have an index
+        return this.hashMap.get(hashCode).get(key);
     }
 
     public void remove(int key) {
-
+        // calculate index address with modulus
+        int hashCode =key%modNumber;// I have an index
+        this.hashMap.get(hashCode).remove(key);
     }
 }
 

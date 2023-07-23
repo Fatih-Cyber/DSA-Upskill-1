@@ -8,8 +8,21 @@ public class Bucket {
     public Bucket() {
         this.bucket = new LinkedList<KeyValue<Integer,Integer>>();
     }
-    public void get(int key){}
-    public void remove(int key){}
+    public int get(int key){
+        for (KeyValue<Integer,Integer> pair:bucket) {
+            if(pair.key.equals(key)) {return pair.value;
+           }
+        }
+        return -1;
+    }
+    public void remove(int key){
+        for (KeyValue<Integer,Integer> pair:bucket) {
+            if(pair.key.equals(key)) {
+                this.bucket.remove(pair);
+                break;
+            }
+        }
+    }
     public void update(int key, int value){
         // if Key exists then update value part
         boolean found=false;
