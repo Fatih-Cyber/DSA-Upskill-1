@@ -10,6 +10,7 @@ public class MyHashMap {
 
     public MyHashMap() {
       this.modNumber=2341;
+        this.hashMap=new ArrayList<>();
         for (int i = 0; i < 2341; i++) {
             this.hashMap.add(new Bucket());
         }
