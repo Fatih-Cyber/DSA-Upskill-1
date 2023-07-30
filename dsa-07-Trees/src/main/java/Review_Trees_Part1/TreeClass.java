@@ -31,4 +31,16 @@ public class TreeClass {
             }
         }
     }
+    void preOrderTraversal(TreeNode root){
+        if (root==null) return;// termination
+        System.out.println(root.name); // visit/perform operation root node
+        preOrderTraversal(root.leftChild);// recursive visit left subtree
+        preOrderTraversal(root.rightChild);// recursively visit right subtree
+    }
+    void inOrderTraversal(TreeNode root){
+        if (root==null) return;// termination
+        inOrderTraversal(root.leftChild);//recursively visit left subtree
+        System.out.println(root.name);
+        inOrderTraversal(root.rightChild);// recursively visit right subtree
+    }
 }
