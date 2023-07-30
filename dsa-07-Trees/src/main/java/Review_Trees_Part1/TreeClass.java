@@ -1,46 +1,71 @@
 package Review_Trees_Part1;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class TreeClass {
     TreeNode root;
 
     public TreeClass() {
         //Why default is null? Reference types? Null
     }
-    public void insert(TreeNode newNode){
+
+    public void insert(TreeNode newNode) {
         //Tree can be empty
-        if (root==null) {
-            root=newNode;
+        if (root == null) {
+            root = newNode;
             return;
         }
-        TreeNode current=root;
+        TreeNode current = root;
         while (true) {
-            if(newNode.id<= current.id){
-                if(current.leftChild==null){
+            if (newNode.id <= current.id) {
+                if (current.leftChild == null) {
                     //make insertion
-                    current.leftChild=newNode;//if left is null where you cannot branch left
+                    current.leftChild = newNode;//if left is null where you cannot branch left
                     break;
                 }
-                current=current.leftChild;// if left child is not null branch left
-            }else {
-                if(current.rightChild==null){
+                current = current.leftChild;// if left child is not null branch left
+            } else {
+                if (current.rightChild == null) {
                     //make insertion if right is null where you cannot branch right
-                    current.rightChild=newNode;
+                    current.rightChild = newNode;
                     break;
                 }
-                current=current.rightChild;// if right child is not null branch right
+                current = current.rightChild;// if right child is not null branch right
             }
         }
     }
-    void preOrderTraversal(TreeNode root){
-        if (root==null) return;// termination
+
+    void preOrderTraversal(TreeNode root) {
+        if (root == null) return;// termination
         System.out.println(root.name); // visit/perform operation root node
         preOrderTraversal(root.leftChild);// recursive visit left subtree
         preOrderTraversal(root.rightChild);// recursively visit right subtree
     }
-    void inOrderTraversal(TreeNode root){
-        if (root==null) return;// termination
+
+    void inOrderTraversal(TreeNode root) {
+        if (root == null) return;// termination
         inOrderTraversal(root.leftChild);//recursively visit left subtree
         System.out.println(root.name);
         inOrderTraversal(root.rightChild);// recursively visit right subtree
+    }
+
+    void postOrderTraversal(TreeNode root) {
+        if (root == null) return;// termination
+        postOrderTraversal(root.leftChild);//recursively visit left subtree
+        postOrderTraversal(root.rightChild);// recursively visit right subtree
+        System.out.println(root.name);
+
+    }
+    void levelOrderTraversal(){
+        if (root==null) return;
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode toVisit=queue.poll();
+            System.out.println(toVisit.name);
+            if(toVisit.leftChild!=null) queue.add(toVisit.leftChild);
+            if(toVisit.rightChild!=null) queue.add(toVisit.rightChild);
+        }
     }
 }

@@ -9,5 +9,6 @@ public class TreeApp {
         tree.insert(new TreeNode("Betul", "QQ",6));
         tree.insert(new TreeNode("Kadifa", "WW",4));
         tree.preOrderTraversal(tree.root);
+        tree.levelOrderTraversal();
     }
 }
