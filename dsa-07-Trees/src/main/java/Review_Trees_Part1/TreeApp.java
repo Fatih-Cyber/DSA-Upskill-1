@@ -13,8 +13,10 @@ public class TreeApp {
         tree.preOrderTraversalIterative(tree.root);
         //tree.levelOrderTraversal();
         System.out.println();
-       // tree.inOrderTraversalIterative(tree.root);
+        System.out.println("Iterative In Order");
+        tree.inOrderTraversalIterative(tree.root);
         System.out.println();
+        System.out.println("Recursive In Order");
         tree.inOrderTraversal(tree.root);
     }
 }
