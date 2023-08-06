@@ -9,7 +9,9 @@ public class TreeApp {
         }
       VisualizeTree.printTree(tree.root,null,false);
         tree.printLeaves(tree.root);
-
+        System.out.println();
+        System.out.println(tree.height(tree.root.leftChild));
+        System.out.println("Count of leaf nodes:  "+tree.countLeaves(tree.root));
         /*tree.preOrderTraversal(tree.root);
         System.out.println();
         System.out.println("In Order Traversal :");

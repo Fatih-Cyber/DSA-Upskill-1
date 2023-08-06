@@ -94,5 +94,30 @@ public class MyTree {
             printLeaves(root.rightChild);
        }
 
+       //Task 4: Implement a method that calculates height of a Node of a BST.
+          int height(TNode root){
+             // if root null return -1
+              if (root==null) return -1;
+              // if leaf return 0;
+              if(isLeaf(root)) return 0;
+             return 1 + Math.max(height(root.leftChild),height(root.rightChild));
+          }
+
+   // Task 5: Implement a method that counts leaves of a BST.
+       int countLeaves(TNode root){
+        // root return null
+           if(root==null) return 0;
+           if (isLeaf(root)) return 1;
+           return countLeaves(root.leftChild) + countLeaves(root.rightChild);
+       }
+    //Task 6: Implement a method that returns sum of leaf values of a BST.
+      int findSumOfLeaves(TNode root){
+          if(root==null) return 0;
+          if (isLeaf(root)) return root.value;
+          return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
+      }
+   // Task 7: Implement a method that returns sum of Node values of a BST.
+   // int  nodeSums(Node root){}
+
 
 }
