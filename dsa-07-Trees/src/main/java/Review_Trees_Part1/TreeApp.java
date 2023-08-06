@@ -10,7 +10,7 @@ public class TreeApp {
         tree.insert(new TreeNode("Kadifa", "WW",4));
         tree.preOrderTraversal(tree.root);
         System.out.println();
-       // tree.preOrderTraversalIterative(tree.root);
+        tree.preOrderTraversalIterative(tree.root);
         //tree.levelOrderTraversal();
         System.out.println();
        // tree.inOrderTraversalIterative(tree.root);
