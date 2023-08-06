@@ -97,6 +97,11 @@ public class MyTree {
         if (isLeaf(root)) return 0;
         return 1+ Math.max(height(root.leftChild), height(root.rightChild));
     }
+    int height2 (TNode N) {
+        if (N == null)
+            return 0;
+        return N.height;
+    }
     public int calculateNodeDepthSums(){
         return nodeDepthSums(root, 0);
     }

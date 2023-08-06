@@ -2,6 +2,7 @@ package Review_Trees_Part1;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class TreeClass {
     TreeNode root;
@@ -42,6 +43,7 @@ public class TreeClass {
         preOrderTraversal(root.leftChild);// recursive visit left subtree
         preOrderTraversal(root.rightChild);// recursively visit right subtree
     }
+
 
     void inOrderTraversal(TreeNode root) {
         if (root == null) return;// termination
