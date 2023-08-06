@@ -8,7 +8,7 @@ public class TreeApp {
             tree.insert(numbers[i]);
         }
       VisualizeTree.printTree(tree.root,null,false);
-      System.out.println(tree.height (tree.root.leftChild.leftChild.rightChild));
+        tree.printLeaves(tree.root);
 
         /*tree.preOrderTraversal(tree.root);
         System.out.println();

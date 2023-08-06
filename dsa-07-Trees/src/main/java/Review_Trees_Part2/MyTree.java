@@ -69,11 +69,30 @@ public class MyTree {
         }
     }
    // Task 1: Implement finding an integer value in a BST (Binary Search Tree).
-       boolean contains(int value){}
+       boolean contains(int value){
+        if (root==null) return false;
+        TNode current=root;
+           while (current != null) {
+           // value < current
+               if (value< current.value) current=current.leftChild;
+               //   value>current
+               else if (value>current.value) current=current.rightChild;
+               else return true;
+           }
+           return false;
+           }
+
    //  Task 2: Implement a method that returns true if the node is a leaf in a BST.
-       boolean isLeaf(TNode node){}
+      boolean isLeaf(TNode node){
+       return node.leftChild==null && node.rightChild==null;
+      }
    // Task 3: Implement a method that prints leaves of a BST.
-       void printLeaves(TNode root)
+       void printLeaves(TNode root){
+            if (root==null) return;
+            if (isLeaf(root)) System.out.print(root.value+" , ");
+            printLeaves(root.leftChild);
+            printLeaves(root.rightChild);
+       }
 
 
 }
