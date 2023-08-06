@@ -117,7 +117,10 @@ public class MyTree {
           return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
       }
    // Task 7: Implement a method that returns sum of Node values of a BST.
-   // int  nodeSums(Node root){}
+        int  nodeSums(TNode root){
+            if(root==null) return 0;
+            return root.value+ nodeSums(root.leftChild) + nodeSums(root.rightChild);
+        }
 
 
 }

@@ -1,5 +1,7 @@
 package Review_Trees_Part2;
 
+import java.security.spec.RSAOtherPrimeInfo;
+
 public class TreeApp {
     public static void main(String[] args) {
         MyTree tree=new MyTree();
@@ -12,6 +14,8 @@ public class TreeApp {
         System.out.println();
         System.out.println(tree.height(tree.root.leftChild));
         System.out.println("Count of leaf nodes:  "+tree.countLeaves(tree.root));
+        System.out.println("Sum of leaf Node values:  " + tree.findSumOfLeaves(tree.root));
+        System.out.println("Sum of nodes : "+ tree.nodeSums(tree.root));
         /*tree.preOrderTraversal(tree.root);
         System.out.println();
         System.out.println("In Order Traversal :");
