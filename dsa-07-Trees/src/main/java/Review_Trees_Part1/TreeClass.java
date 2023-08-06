@@ -43,7 +43,25 @@ public class TreeClass {
         preOrderTraversal(root.leftChild);// recursive visit left subtree
         preOrderTraversal(root.rightChild);// recursively visit right subtree
     }
+    void preOrderTraversalIterative(TreeNode root) {
+        // check if root is null
+        if(root==null) return;
+        // create stack
+        Stack<TreeNode> stack=new Stack<>();
+        // push root into stack
+        stack.push(root);
+        // while loop (until stack is empty)
+        while(!stack.isEmpty()){
+            //pop stack
+            TreeNode poppedNode=stack.pop();
+            // print popped node
+            System.out.print(poppedNode.name + " , ");
+            // push popped node children into stack (rightchild first than left child)
+            if (poppedNode.rightChild!=null) stack.push(poppedNode.rightChild);
+            if (poppedNode.leftChild!=null)stack.push(poppedNode.leftChild);
 
+        }
+    }
 
     void inOrderTraversal(TreeNode root) {
         if (root == null) return;// termination
