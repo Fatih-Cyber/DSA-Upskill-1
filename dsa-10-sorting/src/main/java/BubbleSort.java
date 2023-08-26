@@ -8,7 +8,7 @@ public class BubbleSort {
                     swap=true;
                 }
             }
-            if(!swap) return array;
+            if(!swap) return array;// this means array is in order
         }
         return array;
     }
