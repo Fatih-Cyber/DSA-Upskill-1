@@ -1,6 +1,7 @@
 package review_sort;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class LRUCache {
     int size;
@@ -67,6 +68,11 @@ public class LRUCache {
             node.value=value; // update the value
             moveToFirst(node);// make it recent
 
+        }
+    }
+    void printLRU(){
+        for(Map.Entry<Integer,DNode> entry:cacheMap.entrySet()){
+            System.out.println(entry.getKey() +": "+ entry.getValue());
         }
     }
 
