@@ -34,8 +34,8 @@ public class Search2DMatrix {
         while (left<=right){
             int midIndex=(left+right)/2;
             // rows and column from index number;
-            int row=midIndex/numberOfCols;
-            int col=midIndex%numberOfCols;
+            int row=midIndex / numberOfCols;
+            int col=midIndex % numberOfCols;
             // get value from matrix
             int midValue=matrix[row][col];
             if (target==midValue) return true;
